@@ -42,6 +42,7 @@ return new class extends Migration
      */
     public function down(): void
     {
+        //dropIfExists refere-se a deletar a tabela caso ela exista no banco de dados
         Schema::dropIfExists('users');
         Schema::dropIfExists('password_reset_tokens');
         Schema::dropIfExists('sessions');
